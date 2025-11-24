@@ -532,75 +532,6 @@
         .testimonial-card {
             background: white;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .testimonial-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-            border: 3px solid var(--secondary-color);
-        }
-
-        .testimonial-content h4 {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .testimonial-content .role {
-            color: var(--secondary-color);
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .testimonial-content p {
-            font-style: italic;
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonial-card {
-                flex-direction: column;
-                text-align: center;
-                padding: 1.5rem;
-            }
-
-            .testimonial-content {
-                text-align: center;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-color);
-            color: var(--light-text);
-            padding: 4rem 0 2rem;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
 
@@ -922,7 +853,7 @@
                 <!-- Thirumala -->
                 <div class="faculty-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="faculty-img-wrapper">
-                        <img src="assets/images/Mr. Thirumala.jpg" alt="Mr. Thirumala" loading="lazy">
+                        <img src="assets/images/Mr. Thirumala.png" alt="Mr. Thirumala" loading="lazy">
                     </div>
                     <div class="faculty-info">
                         <h3>Mr. Thirumala</h3>
@@ -1006,6 +937,13 @@
                     <div class="testimonial-content">
                         <h4>Advaith</h4>
                         <p class="role">Class 11 JEE Aspirant</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>"The IIT, NIT qualified faculty of SRSMA is fully committed to the students’ success."</p>
                     </div>
                 </div>
@@ -1015,6 +953,13 @@
                     <div class="testimonial-content">
                         <h4>Sumedh</h4>
                         <p class="role">Class 12 JEE Aspirant</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>"When I joined here I was not confident and disinterested in learning but after gaining lot
                             of conceptual clarity which made me enjoy learning. Now I am looking forward to learn new
                             things everyday."</p>
@@ -1026,6 +971,13 @@
                     <div class="testimonial-content">
                         <h4>Sneha</h4>
                         <p class="role">Longterm JEE Aspirant</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>"SRSMA transformed my JEE preparation with their stress-free,
                             supportive environment. Their expert guidance on conceptual clarity was
                             instrumental in boosting my confidence & exam performance."</p>
@@ -1037,6 +989,13 @@
                     <div class="testimonial-content">
                         <h4>Saloni</h4>
                         <p class="role">NEET Alumni</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>"SRSMA has refined my academic approach, making me more disciplined & confident. Clear,
                             concept-focused teaching greatly improved my understanding of physics & other subjects.
                             The supportive faculty ensures every doubt is addressed"</p>
@@ -1054,6 +1013,13 @@
                     <div class="testimonial-content">
                         <h4>Mr. Sachin</h4>
                         <p class="role">Parent of JEE Aspirant</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>"The Students get personal attention and they are not pressurized or forced in any way. The
                             IIT, NIT qualified faculty of SRSMA is fully committed to the students’ success"</p>
                     </div>
@@ -1065,6 +1031,13 @@
                     <div class="testimonial-content">
                         <h4>Mrs. Nidhi</h4>
                         <p class="role">Sloka the School Principal</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <p>"Batch Size is not more than 30 students, so they make learning fun for the students.
                             That is the best thing that I liked about it."</p>
                     </div>
