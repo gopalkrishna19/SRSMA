@@ -427,7 +427,7 @@
 
         .faculty-info .qualification {
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             color: #555;
         }
 
@@ -727,48 +727,500 @@
 
             .counselor-card {
                 flex-direction: column;
-                </div><div class="footer-column map-column"><h3>Find Us</h3><div class="map-wrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.666738536666!2d78.3856!3d17.3800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIyJzQ4LjAiTiA3OMKwMjMnMDguMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
-                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div><div class="social-icons"><a href="https://www.facebook.com/shriramsma/" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/company/shriramsma" target="_blank"><i class="fab fa-linkedin"></i></a></div></div></div></footer>< !-- Back to Top Button --><div id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></div>< !-- AOS Animation JS --><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script> // Initialize AOS
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
 
-                AOS.init({
-                    duration: 800,
-                    once: true,
-                    offset: 100
-                });
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
 
-            // Mobile Menu Toggle
-            const menuToggle=document.querySelector('.mobile-menu-toggle');
-            const navLinks=document.querySelector('.nav-links');
-            const nav=document.querySelector('nav');
+            .logo-text {
+                font-size: 1rem;
+            }
+        }
 
-            menuToggle.addEventListener('click', ()=> {
-                    nav.classList.toggle('active');
-                });
+        /* Gallery Styles */
+        .gallery-column {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-            // Close menu when clicking a link
-            document.querySelectorAll('.nav-links a').forEach(link=> {
-                    link.addEventListener('click', ()=> {
-                            nav.classList.remove('active');
-                        });
-                });
+        .gallery-item {
+            text-align: center;
+            width: 100%;
+        }
 
-            // Back to Top Button
-            const backToTopBtn=document.getElementById('back-to-top');
+        .gallery-item img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
 
-            window.addEventListener('scroll', ()=> {
-                    if (window.scrollY > 300) {
-                        backToTopBtn.classList.add('show');
-                    }
+        .gallery-item h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
 
-                    else {
-                        backToTopBtn.classList.remove('show');
-                    }
-                });
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="assets/images/logo blue.jpg" alt="SRSMA Logo">
+                </div>
+                <div class="logo-text">Shri Ram Smart Minds Academy</div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeEn0fcTmNiCHEL5r87CkHE8sYd_GODb5dZLQ4jdiCg2ta8PA/viewform"
+                    target="_blank" class="cta-button">Enroll Now</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-            backToTopBtn.addEventListener('click', ()=> {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Unlock Your Potential with SRSMA</h1>
+                <p class="sub-headline">Join us for a Stress-Free Learning Experience that nurtures wholesome success in
+                    a caring environment focused on every child!</p>
+            </div>
+            <div class="hero-image-wrapper" data-aos="fade-left">
+                <img src="assets/images/intro.png" alt="Student Studying" class="hero-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Join Us?</h2>
+            <div class="video-wrapper" data-aos="zoom-in">
+                <iframe src="https://www.youtube.com/embed/2u5x9IbW0ms" title="SRSMA Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <div class="container">
+            <div class="scholarship-banner" data-aos="fade-down">
+                <p><i class="fas fa-star"></i> We offer up to 90% Merit-Based Scholarship <i class="fas fa-star"></i>
+                </p>
+            </div>
+            <h2 class="section-title" data-aos="fade-up">Our Courses</h2>
+            <div class="courses-grid">
+                <!-- Card 1 -->
+                <div class="course-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>JEE Mains, Advanced & EAMCET</h3>
+                            <p class="subtitle">Class XI, XII, Longterm</p>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>"Engineer Your Future."</strong><br>
+                                Your gateway to IITs, NITs, and top state engineering colleges. Master Physics,
+                                Chemistry, and Maths with our proven strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="course-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>NEET (BiPC)</h3>
+                            <p class="subtitle">Class XI, XII, Longterm</p>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>"The Path to the White Coat."</strong><br>
+                                Realize your dream of becoming a doctor. Comprehensive biology-focused training to help
+                                you crack India’s toughest medical entrance exam.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="course-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Foundations Course</h3>
+                            <p class="subtitle">Class VIII, IX, X</p>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>"Start Early, Stay Ahead."</strong><br>
+                                Build an unshakeable academic base. Perfect for Class 8-10 students aiming for
+                                Olympiads, NTSE, and future competitive success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Meet Our Expert Faculty</h2>
+            <div class="faculty-grid">
+                <!-- Brajesh Goutam -->
+                <div class="faculty-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faculty-img-wrapper">
+                        <img src="assets/images/Mr. Brajesh.jpg" alt="Mr. Brajesh Goutam" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mr. Brajesh Goutam</h3>
+                        <p class="qualification">IIT Madras (B.Tech)</p>
+                        <p class="role">Physics Faculty</p>
+                        <p class="experience">9+ Years Experience (Bansal, Byjus, Sri Chaitanya).
+                        </p>
+                    </div>
+                </div>
+                <!-- Ninad -->
+                <div class="faculty-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faculty-img-wrapper">
+                        <img src="assets/images/Mr. Ninad.jpg" alt="Mr. Ninad" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mr. Ninad</h3>
+                        <p class="qualification">IIT Madras (B.Tech + M.Tech, Dept Topper)</p>
+                        <p class="role">Chemistry Faculty</p>
+                        <p class="experience">4+ Years Experience</p>
+                        <p class="experience">5+ Years mentoring IITians</p>
+                    </div>
+                </div>
+                <!-- Thirumala -->
+                <div class="faculty-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faculty-img-wrapper">
+                        <img src="assets/images/Mr. Thirumala.jpg" alt="Mr. Thirumala" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mr. Thirumala</h3>
+                        <p class="qualification">NIT Warangal (M.Tech)</p>
+                        <p class="role">Maths Faculty</p>
+                        <p class="experience">4+ Years Teaching </p>
+                        <p class="experience">8 Years Corporate Experience</p>
+                    </div>
+                </div>
+                <!-- Gopalkrishna -->
+                <div class="faculty-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faculty-img-wrapper">
+                        <img src="assets/images/Mr. Gopalkrishna.jpg" alt="Mr. Gopalkrishna" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mr. Gopalkrishna</h3>
+                        <p class="qualification">IIT Madras (B.Tech)</p>
+                        <p class="role">Maths Faculty</p>
+                        <p class="experience">3+ Year Teaching Experience</p>
+                        <p class="experience">Karnataka Regional Maths Olympiad Rank 7</p>
+                    </div>
+                </div>
+                <!-- Manisha -->
+                <div class="faculty-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faculty-img-wrapper">
+                        <img src="assets/images/Mrs. Manisha.jpg" alt="Mrs. Manisha" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mrs. Manisha</h3>
+                        <p class="qualification">Masters in Physiotherapy</p>
+                        <p class="role">Biology Faculty</p>
+                        <p class="experience">3+ Years Experience</p>
+                        <p class="experience">Counseling expert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counseling Section -->
+    <section id="counseling">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Student Counseling & Mentorship</h2>
+            <div class="counselor-card" data-aos="fade-right">
+                <div class="counselor-img-wrapper">
+                    <img src="assets/images/Mr. Amal M Das.png" alt="Mr. Amal M Das" loading="lazy">
+                </div>
+                <div class="counselor-info">
+                    <h3>Mr. Amal M Das</h3>
+                    <p class="qualification">IIT Kharagpur (B.Tech Honors), MA Psychology</p>
+                    <p class="role">Performance Coach & Counselor</p>
+                    <p class="experience">Expert in guiding students through academic pressure and performance anxiety.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Results</h2>
+            <div class="results-wrapper" data-aos="zoom-in">
+                <img src="assets/images/IPE2025FirstYearResults.png" alt="IPE 2025 First Year Results"
+                    class="results-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Testimonials</h2>
+
+            <!-- Students Subsection -->
+            <h3 class="subsection-title" data-aos="fade-up">Students</h3>
+            <div class="testimonials-grid">
+                <!-- Advaith -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/review/Advaith.png" alt="Advaith" class="testimonial-img" loading="lazy">
+                    <div class="testimonial-content">
+                        <h4>Advaith</h4>
+                        <p class="role">Class 11 JEE Aspirant</p>
+                        <p>"The IIT, NIT qualified faculty of SRSMA is fully committed to the students’ success."</p>
+                    </div>
+                </div>
+                <!-- Sumedh -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/review/Sumedh.png" alt="Sumedh" class="testimonial-img" loading="lazy">
+                    <div class="testimonial-content">
+                        <h4>Sumedh</h4>
+                        <p class="role">Class 12 JEE Aspirant</p>
+                        <p>"When I joined here I was not confident and disinterested in learning but after gaining lot
+                            of conceptual clarity which made me enjoy learning. Now I am looking forward to learn new
+                            things everyday."</p>
+                    </div>
+                </div>
+                <!-- Sneha -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/review/Sneha.jpg" alt="Sneha" class="testimonial-img" loading="lazy">
+                    <div class="testimonial-content">
+                        <h4>Sneha</h4>
+                        <p class="role">Longterm JEE Aspirant</p>
+                        <p>"SRSMA transformed my JEE preparation with their stress-free,
+                            supportive environment. Their expert guidance on conceptual clarity was
+                            instrumental in boosting my confidence & exam performance."</p>
+                    </div>
+                </div>
+                <!-- Saloni -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/review/Saloni.jpg" alt="Saloni" class="testimonial-img" loading="lazy">
+                    <div class="testimonial-content">
+                        <h4>Saloni</h4>
+                        <p class="role">NEET Alumni</p>
+                        <p>"SRSMA has refined my academic approach, making me more disciplined & confident. Clear,
+                            concept-focused teaching greatly improved my understanding of physics & other subjects.
+                            The supportive faculty ensures every doubt is addressed"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Testimonials Subsection -->
+            <h3 class="subsection-title" data-aos="fade-up">Other Testimonials</h3>
+            <div class="testimonials-grid">
+                <!-- Mr. Sachin -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/review/Mr Sachin.png" alt="Mr. Sachin" class="testimonial-img"
+                        loading="lazy">
+                    <div class="testimonial-content">
+                        <h4>Mr. Sachin</h4>
+                        <p class="role">Parent of JEE Aspirant</p>
+                        <p>"The Students get personal attention and they are not pressurized or forced in any way. The
+                            IIT, NIT qualified faculty of SRSMA is fully committed to the students’ success"</p>
+                    </div>
+                </div>
+                <!-- Mrs. Nidhi -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/review/Mrs Nidhi.png" alt="Mrs. Nidhi" class="testimonial-img"
+                        loading="lazy">
+                    <div class="testimonial-content">
+                        <h4>Mrs. Nidhi</h4>
+                        <p class="role">Sloka the School Principal</p>
+                        <p>"Batch Size is not more than 30 students, so they make learning fun for the students.
+                            That is the best thing that I liked about it."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hostel Section -->
+    <section id="hostel">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Hostel</h2>
+            <div class="gallery-column">
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/hostel/Boys Hostel Room.png" alt="Boys Hostel Room" loading="lazy">
+                    <h3>Boys Hostel Room</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/hostel/Comfortable Hostel Facilities.jpg"
+                        alt="Comfortable Hostel Facilities" loading="lazy">
+                    <h3>Comfortable Hostel Facilities</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/hostel/Distraction Free Environment at Hostel.png"
+                        alt="Distraction Free Environment at Hostel" loading="lazy">
+                    <h3>Distraction Free Environment at Hostel</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/hostel/Girls Hostel Room.png" alt="Girls Hostel Room" loading="lazy">
+                    <h3>Girls Hostel Room</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/hostel/Girls Hostel Study Room.jpg" alt="Girls Hostel Study Room"
+                        loading="lazy">
+                    <h3>Girls Hostel Study Room</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/hostel/High-Quality Vegetarian Food.png" alt="High-Quality Vegetarian Food"
+                        loading="lazy">
+                    <h3>High-Quality Vegetarian Food</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Culture</h2>
+            <div class="gallery-column">
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/culture/Birthday Celebrations.png" alt="Birthday Celebrations"
+                        loading="lazy">
+                    <h3>Birthday Celebrations</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/culture/Birthday Celebrations Again.png" alt="Birthday Celebrations Again"
+                        loading="lazy">
+                    <h3>Birthday Celebrations Again</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/culture/Drama Screening.png" alt="Drama Screening" loading="lazy">
+                    <h3>Drama Screening</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/culture/Healthy Recreation.png" alt="Healthy Recreation" loading="lazy">
+                    <h3>Healthy Recreation</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/culture/Lamp Offering.png" alt="Lamp Offering" loading="lazy">
+                    <h3>Lamp Offering</h3>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="assets/images/culture/Mantra Meditation.png" alt="Mantra Meditation" loading="lazy">
+                    <h3>Mantra Meditation</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-container">
+            <div class="footer-column info-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Touch Stone Public School, Sun City, Bandlaguda Jagir,
+                    Hyderabad</p>
+                <p><i class="fas fa-phone"></i> +91 84639 11854</p>
+                <p><i class="fas fa-envelope"></i> smartmindsacademy108@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sat, 9 AM - 7 PM</p>
+            </div>
+            <div class="footer-column map-column">
+                <h3>Find Us</h3>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.666738536666!2d78.3856!3d17.3800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIyJzQ4LjAiTiA3OMKwMjMnMDguMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/shriramsma/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/shriramsma" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
             });
-        </script></body></html>
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
