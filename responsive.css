@@ -1,5 +1,30 @@
 /* Additional Mobile-Responsive Styles for SRSMA Website */
 
+/* Prevent Image Overflow - Critical for Mobile */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.results-img,
+.gallery-item img,
+.hero-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    overflow-x: hidden;
+}
+
 /* Touch-Friendly Buttons */
 .cta-button,
 .learn-more-btn {
@@ -27,6 +52,7 @@
 
 /* Tablets and Large Mobile Devices (Below 768px) */
 @media (max-width: 768px) {
+
     /* Header & Navigation */
     header {
         padding: 0.5rem 0;
@@ -121,6 +147,24 @@
         font-size: 1.2rem;
     }
 
+    /* Results Section - Fix image overflow */
+    #results {
+        padding: 3rem 0;
+    }
+
+    .results-wrapper {
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    .results-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
     /* Footer */
     .footer-container {
         grid-template-columns: 1fr;
@@ -130,6 +174,7 @@
 
 /* Small Mobile Devices (Below 480px) */
 @media (max-width: 480px) {
+
     /* Container padding */
     .container {
         width: 95%;
