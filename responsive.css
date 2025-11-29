@@ -1,0 +1,229 @@
+/* Additional Mobile-Responsive Styles for SRSMA Website */
+
+/* Touch-Friendly Buttons */
+.cta-button,
+.learn-more-btn {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Stars Rating */
+.stars {
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+}
+
+/* Tablet Devices (Below 1024px) */
+@media (max-width: 1024px) {
+    .faculty-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablets and Large Mobile Devices (Below 768px) */
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+        max-width: 150px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    /* Hero Section */
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+
+    .sub-headline {
+        font-size: 1rem;
+    }
+
+    #hero {
+        min-height: 50vh;
+        padding: 1.5rem 0;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .subsection-title {
+        font-size: 1.5rem;
+    }
+
+    /* Courses */
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .scholarship-banner {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    /* Faculty */
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Counselor */
+    .counselor-card {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 2rem 1.5rem !important;
+        position: static !important;
+        width: auto !important;
+        background: white !important;
+    }
+
+    .counselor-img-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .counselor-info h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Gallery */
+    .gallery-column {
+        gap: 3rem;
+    }
+
+    .gallery-item h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Small Mobile Devices (Below 480px) */
+@media (max-width: 480px) {
+    /* Container padding */
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    /* Logo */
+    .logo img {
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: 0.75rem;
+        max-width: 120px;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .sub-headline {
+        font-size: 0.9rem;
+    }
+
+    /* Buttons */
+    .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .subsection-title {
+        font-size: 1.3rem;
+    }
+
+    /* Course Cards */
+    .course-card {
+        height: 300px;
+    }
+
+    .card-front h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-front,
+    .card-back {
+        padding: 1.5rem;
+    }
+
+    .card-back p {
+        font-size: 0.9rem;
+    }
+
+    /* Faculty */
+    .faculty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-img-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .faculty-info h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Testimonials */
+    .testimonial-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Scholarship Banner */
+    .scholarship-banner {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    /* Back to Top */
+    #back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
