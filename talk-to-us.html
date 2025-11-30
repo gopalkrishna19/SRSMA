@@ -424,14 +424,6 @@
             };
 
             try {
-                // IMPORTANT: Replace this URL with your actual Google Apps Script Web App deployment URL
-                // The URL should look like: https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec
-                // To get this URL:
-                // 1. Open your Google Apps Script project: https://script.google.com/u/0/home/projects/19Fuo5ch5x1RuyDEfJk0CO22PNVTbJVhpMET4Fvhh6iokmEL07iiX0OGs/edit
-                // 2. Click "Deploy" > "New deployment"
-                // 3. Select type "Web app"
-                // 4. Set "Execute as" to "Me" and "Who has access" as needed
-                // 5. Click "Deploy" and copy the Web App URL
                 const scriptURL = 'https://script.google.com/macros/s/AKfycbwIYdQBU4f9ycczPkbWQGlT-SVpPtwWD9APZW7rNpVDRDTZuwRZR8zmeJwpftnP4kT-sQ/exec';
 
                 const response = await fetch(scriptURL, {
@@ -445,13 +437,14 @@
                 const result = await response.json();
 
                 if (result.status === 'success') {
+                    // Hide the form
+                    form.style.display = 'none';
+
+                    // Show success message
                     successMessage.classList.add('show');
-                    form.reset();
-                    classSelect.disabled = true;
-                    modeSelect.disabled = true;
 
                     // Scroll to success message
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
                     throw new Error('Submission failed');
                 }
