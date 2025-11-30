@@ -373,14 +373,14 @@
 
         .card-front {
             background-color: white;
-            border: 1px solid #eee;
+            border: 2px solid var(--primary-color);
         }
 
         .card-back {
             background-color: var(--primary-color);
             color: white;
             transform: rotateY(180deg);
-            border: 1px solid var(--primary-color);
+            border: 2px solid var(--primary-color);
         }
 
         .card-front h3 {
@@ -822,6 +822,70 @@
             }
         }
     </style>
+    <style>
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 900px;
+            max-height: 80vh;
+            object-fit: contain;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-lightbox:hover,
+        .close-lightbox:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Cursor pointer for enlargeable images */
+        section img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        section img:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -1249,9 +1313,10 @@
         <div class="container footer-container">
             <div class="footer-column info-column">
                 <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i>Touch Stone Public School,
-                    Sun City,
+                <p><i class="fas fa-map-marker-alt"></i>Shri Ram Smart Minds Academy,
+                    2nd Floor Sankirtan Bhavan,
                     Bandlaguda Jagir,
+                    Sun City,
                     Hyderabad</p>
                 <p><i class="fas fa-phone"></i>+91 84639 11854</p>
                 <p><i class="fas fa-envelope"></i>smartmindsacademy108@gmail.com</p>
@@ -1278,6 +1343,12 @@
     <!-- Back to Top Button -->
     <div id="back-to-top" title="Back to Top">
         <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
     </div>
 
     <!-- AOS Animation JS -->
@@ -1332,6 +1403,32 @@
                 behavior: 'smooth'
             });
         });
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+        // Select all images inside sections (excluding header logo)
+        const images = document.querySelectorAll('section img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                lightbox.style.display = "block";
+                lightboxImg.src = this.src;
+                lightboxImg.alt = this.alt;
+            });
+        });
+
+        closeBtn.onclick = function () {
+            lightbox.style.display = "none";
+        }
+
+        lightbox.onclick = function (e) {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = "none";
+            }
+        }
     </script>
 </body>
 

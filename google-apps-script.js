@@ -18,12 +18,12 @@ function doPost(e) {
   try {
     // Parse the incoming data
     const data = JSON.parse(e.postData.contents);
-    
+
     // Open the Google Sheet
     const sheetId = '1PRgrDDG1CEDbI63JlbVGkOYlqjzGxu0Z4-JQ0HCDlr4';
     const spreadsheet = SpreadsheetApp.openById(sheetId);
     const sheet = spreadsheet.getActiveSheet();
-    
+
     // Check if headers exist, if not create them
     if (sheet.getLastRow() === 0) {
       sheet.appendRow([
@@ -36,7 +36,7 @@ function doPost(e) {
         'Mode'
       ]);
     }
-    
+
     // Append the new row with form data
     sheet.appendRow([
       data.timestamp,
@@ -47,22 +47,22 @@ function doPost(e) {
       data.place,
       data.mode
     ]);
-    
+
     // Send email notification
     sendEmailNotification(data);
-    
+
     // Return success response
     return ContentService
-      .createTextOutput(JSON.stringify({ 
+      .createTextOutput(JSON.stringify({
         'status': 'success',
         'message': 'Form submitted successfully'
       }))
       .setMimeType(ContentService.MimeType.JSON);
-      
+
   } catch (error) {
     // Return error response
     return ContentService
-      .createTextOutput(JSON.stringify({ 
+      .createTextOutput(JSON.stringify({
         'status': 'error',
         'message': error.toString()
       }))
@@ -71,9 +71,9 @@ function doPost(e) {
 }
 
 function sendEmailNotification(data) {
-  const recipient = 'nayakgopal1998@gmail.com';
+  const recipient = 'nayakgopal1998@gmail.com,amalmdas.connect@gmail.com,smartmindsacademy108@gmail.com';
   const subject = `New Inquiry from ${data.studentName} - SRSMA Talk to Us Form`;
-  
+
   const htmlBody = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4;">
       <div style="background-color: #0a192f; color: white; padding: 20px; border-radius: 10px 10px 0 0;">
@@ -163,7 +163,7 @@ function sendEmailNotification(data) {
       </div>
     </div>
   `;
-  
+
   const plainBody = `
 New Student Inquiry - SRSMA
 
@@ -179,7 +179,7 @@ Please follow up with the parent regarding their inquiry.
 
 View all inquiries: https://docs.google.com/spreadsheets/d/1PRgrDDG1CEDbI63JlbVGkOYlqjzGxu0Z4-JQ0HCDlr4/edit
   `;
-  
+
   // Send the email
   GmailApp.sendEmail(recipient, subject, plainBody, {
     htmlBody: htmlBody,
@@ -198,7 +198,7 @@ function testEmailNotification() {
     place: 'Hyderabad',
     mode: 'Offline'
   };
-  
+
   sendEmailNotification(testData);
   Logger.log('Test email sent successfully!');
 }
