@@ -756,11 +756,9 @@
 
         /* Gallery Styles */
         .gallery-column {
-            display: flex;
-            flex-direction: column;
-            gap: 5rem;
-            align-items: center;
-            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             margin: 0 auto;
         }
 
@@ -772,14 +770,26 @@
         .gallery-item img {
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
         .gallery-item h3 {
             color: var(--primary-color);
-            font-size: 1.5rem;
+            font-size: 1rem;
             margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-column {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -901,17 +911,17 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Meet Our Expert Faculty</h2>
             <div class="faculty-grid">
-                <!-- Brajesh Goutam -->
+                <!-- Thirumala -->
                 <div class="faculty-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="faculty-img-wrapper">
-                        <img src="assets/images/Mr. Brajesh.jpg" alt="Mr. Brajesh Goutam" loading="lazy">
+                        <img src="assets/images/Mr. Thirumala.png" alt="Mr. Thirumala" loading="lazy">
                     </div>
                     <div class="faculty-info">
-                        <h3>Mr. Brajesh Goutam</h3>
-                        <p class="qualification">IIT Madras (B.Tech)</p>
-                        <p class="role">Physics Faculty</p>
-                        <p class="experience">9+ Years Experience (Bansal, Byjus, Sri Chaitanya).
-                        </p>
+                        <h3>Mr. Thirumala</h3>
+                        <p class="qualification">NIT Warangal (M.Tech)</p>
+                        <p class="role">Maths Faculty</p>
+                        <p class="experience">4+ Years Teaching </p>
+                        <p class="experience">8 Years Corporate Experience</p>
                     </div>
                 </div>
                 <!-- Ninad -->
@@ -927,17 +937,17 @@
                         <p class="experience">5+ Years mentoring IITians</p>
                     </div>
                 </div>
-                <!-- Thirumala -->
+                <!-- Brajesh Goutam -->
                 <div class="faculty-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="faculty-img-wrapper">
-                        <img src="assets/images/Mr. Thirumala.png" alt="Mr. Thirumala" loading="lazy">
+                        <img src="assets/images/Mr. Brajesh.jpg" alt="Mr. Brajesh Goutam" loading="lazy">
                     </div>
                     <div class="faculty-info">
-                        <h3>Mr. Thirumala</h3>
-                        <p class="qualification">NIT Warangal (M.Tech)</p>
-                        <p class="role">Maths Faculty</p>
-                        <p class="experience">4+ Years Teaching </p>
-                        <p class="experience">8 Years Corporate Experience</p>
+                        <h3>Mr. Brajesh Goutam</h3>
+                        <p class="qualification">IIT Madras (B.Tech)</p>
+                        <p class="role">Physics Faculty</p>
+                        <p class="experience">9+ Years Experience (Bansal, Byjus, Sri Chaitanya).
+                        </p>
                     </div>
                 </div>
                 <!-- Gopalkrishna -->
